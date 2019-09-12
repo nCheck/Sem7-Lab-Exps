@@ -1,0 +1,37 @@
+# Start Mongodb Shell
+
+mongo
+
+# Create new Database
+
+use DATABASE_NAME 
+
+# See Databases
+
+show dbs
+
+# See Collections
+
+show collections
+
+# Create new Collection name movies
+
+db.createCollection("movies")   
+
+# Insert Data (CREATE)
+
+db.movies.insert({"name":"Titanic" , "rating" : 4}) 
+db.movies.insert({"name":"Lagaan" , "rating" : 5}) 
+db.movies.insert({"name":"Godfather" , "rating" : 4})
+
+# Find Data  (READ)
+
+db.movies.find({rating : 4})
+
+# Update Data (UPDATE)
+
+db.movies.update({name : "Godfather"} ,{ $set : {rating : 3} } )
+
+# Delete Data (DELETE)
+
+db.movies.remove({rating : 3})
